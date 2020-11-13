@@ -1,6 +1,6 @@
 import sys
-sys.stdout = open('CodeForces/cf-petya-and-string/output.txt', 'w')
-sys.stdin = open('CodeForces/cf-petya-and-string/input.txt', 'r')
+sys.stdout = open('CodeForces/339A-HelpfulMaths/output.txt', 'w')
+sys.stdin = open('CodeForces/339A-HelpfulMaths/input.txt', 'r')
 
 tc=int(input())
 while(tc>0):
