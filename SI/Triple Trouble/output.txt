@@ -1,0 +1,9 @@
+a[i]= 5 count= 2
+a[i]= 7 count= 2
+a[i]= 8 count= 2
+a[i]= 7 count= 2
+a[i]= 7 count= 2
+a[i]= 5 count= 2
+a[i]= 5 count= 2
+a[i]= 9 count= 0
+9

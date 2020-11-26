@@ -20,9 +20,13 @@ while(tc>0):
             index+=1
         if(len(l)==n):
             result=l
-            print(result)
             break
- 
+        
+    for i in result: 
+        print(i, end=' ')
+        
+    print()
+            
     tc=tc-1
     
 # WA for sample

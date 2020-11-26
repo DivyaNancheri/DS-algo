@@ -6,11 +6,6 @@ from itertools import permutations
 
 tc=int(input())
 
-def get_key(val): 
-    for key, value in my_dict.items(): 
-         if val == value: 
-             return key 
-
 while(tc>0):
     
     n=int(input())
