@@ -1,0 +1,3 @@
+<class 'str'>
+<class 'list'>
+['0', '0', '1']
