@@ -12,7 +12,8 @@ def subsetSum(a,n,k):
             return 'YES'
     return 'NO'
 
-for i in range(t):
+tc = int(input())
+for i in range(tc):
     n,k = [int(x) for x in input().split()]
     a = [int(x) for x in input().split()]
     
@@ -26,3 +27,26 @@ for i in range(t):
 # further optimise with DP
 
     
+# using recursion
+def subsetSum(a,n,sum,i,k):
+    if(i==n):
+        return sum==k
+    return subsetSum(a,n,sum+a[i],i+1,k) or subsetSum(a,n,sum,i+1,k)
+
+tc = int(input())
+for i in range(tc):
+    n,k = [int(x) for x in input().split()]
+    a = [int(x) for x in input().split()]
+    sum=0
+    i=0
+    if(subsetSum(a,n,sum,i,k)==True):
+        print('YES')
+    else:
+        print('NO')
+        
+# TC : 2^n * n      SC: 1
+# for n=100 t= 100
+# 2^100= 10^30
+# TC: 10^30 * 100 * 100 > 10^8 so TLE
+# further optimise with DP
+        
