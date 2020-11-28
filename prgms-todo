@@ -24,4 +24,7 @@
     # TC t*(b-a+1)
     # 2^32= 4*10^9 >10^8
 
-
+5. https://www.interviewbit.com/problems/different-bits-sum-pairwise/
+    partially correct
+    integer overflow
+    
