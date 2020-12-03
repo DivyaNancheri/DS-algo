@@ -4,21 +4,15 @@ sys.stdin = open('testing/input.txt', 'r')
 
 sys.setrecursionlimit(10**6) 
 
-def f(a,n):
-    if(n==0):
-        return 1
-    k=f(a,int(n/2))
-    if(n%2==0):
-        return  k * k
-    if(n%2==1):
-        return k * k * a
-    
-t=int(input())
-m=1000000007    
-for i in range(t):
-    a,n=map(int,input().split())
-    ans=f(a,n)
-    print(ans%m)
+
+n=int(input())
+a=[]
+for i in range(n):
+    a.append(int(input()))
+a.sort()
+for i in range(0,n):
+    print(a[i])
+
     
      
      

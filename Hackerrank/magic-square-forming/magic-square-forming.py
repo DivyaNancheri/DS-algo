@@ -53,11 +53,21 @@ s = []
 for _ in range(3):
     s.append(list(map(int, input().rstrip().split())))
  
-if (isMagicSquare(s)) : 
-    print( "Magic Square") 
-else : 
-    print( "Not a magic Square")
-       
+
+def f(ar,vis,idx):
+    if(idx==9):
+        if (isMagicSquare(s)) : 
+            ans=min(ans, cost(ar,s)) 
+            return
+    for i in range(1,10):
+        if(vis[i]==False){
+            ar[idx]=i
+            vis[i]=True
+            f(ar,vis,idx+1)
+            vis[i]=False
+        }
+        
+        
 for i in range(3):
     for j in range(3):
         print(s[i][j], end = " ")
