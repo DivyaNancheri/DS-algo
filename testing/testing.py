@@ -2,16 +2,19 @@ import sys
 sys.stdout = open('testing/output.txt', 'w')
 sys.stdin = open('testing/input.txt', 'r')
 
-sys.setrecursionlimit(10**6) 
-
-
-n=int(input())
-a=[]
-for i in range(n):
-    a.append(int(input()))
-a.sort()
-for i in range(0,n):
-    print(a[i])
+for i in range(int(input())):
+    n = int(input())
+    l=list(map(int,input().split()))
+    d=l[0]
+    k=1
+    sum=0
+    for j in range(1,n+1):
+        sum = 2*sum + 2*d*l[j]%1000000007
+        d=d+k*l[j]%1000000007
+        k=(k*2)%1000000007
+    final_sum=sum%1000000007
+    print(final_sum)
+    
 
     
      
