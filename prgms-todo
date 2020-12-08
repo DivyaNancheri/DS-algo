@@ -29,3 +29,8 @@
     integer overflow
     
 6. magic-square-forming
+
+7.Problem-Link: https://www.codechef.com/DEC20B/problems/EVENPSUM
+Code-Link:  https://ideone.com/E9ak60
+Verdict: WA/TLE/RTE/CTE
+Time Complexity: O(t*(a+b))
