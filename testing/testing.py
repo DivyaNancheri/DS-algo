@@ -2,18 +2,29 @@ import sys
 sys.stdout = open('testing/output.txt', 'w')
 sys.stdin = open('testing/input.txt', 'r')
 
-for i in range(int(input())):
-    n = int(input())
-    l=list(map(int,input().split()))
-    d=l[0]
-    k=1
-    sum=0
-    for j in range(1,n+1):
-        sum = 2*sum + 2*d*l[j]%1000000007
-        d=d+k*l[j]%1000000007
-        k=(k*2)%1000000007
-    final_sum=sum%1000000007
-    print(final_sum)
+import math  
+  
+# method to print the divisors 
+def printDivisors(n) : 
+      
+    # Note that this loop runs till square root 
+    i = 1
+    while i <= math.sqrt(n): 
+          
+        if (n % i == 0) : 
+              
+            # If divisors are equal, print only one 
+            if (n / i == i) : 
+                print(i)
+            else : 
+                # Otherwise print both 
+                print( i , n/i) 
+        i = i + 1
+  
+# Driver method 
+print( "The divisors of 100 are: ")
+printDivisors(9) 
+  
     
 
     
