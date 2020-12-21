@@ -39,3 +39,26 @@ public class Solution {
     }
                       
 }
+
+
+// Sample Input 0
+
+// 5
+// 8
+// pfyafafd
+// 9
+// sllwffoqq
+// 6
+// yoogvb
+// 4
+// hcch
+// 23
+// mzmqnnrkurfmmfrukrnnqsm
+
+// Sample Output 0
+
+// 3
+// 2
+// 2
+// 4
+// 18

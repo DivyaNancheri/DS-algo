@@ -25,7 +25,7 @@ public class Solution  {
             int res=((one+120-n)*100)/120;
             // bw.write("res="+((one+120-n)*100)/120);    
 
-            if(res>75)
+            if(res>=75)
                 bw.write("YES\n");
             else
                 bw.write("NO\n");
@@ -35,4 +35,17 @@ public class Solution  {
             /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
     }
 }
-00000000000000000000 //20
+
+// INPUT:
+// 3
+// 50
+// 00000000000000000000000000000000000000000000000000
+// 50
+// 01010101010101010101010101010101010101010101010101
+// 2
+// 01
+
+// OUTPUT:
+// NO
+// YES
+// YES
