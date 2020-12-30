@@ -23,3 +23,19 @@ static String superReducedString(String s) {
 
     return sb2.toString();
 }
+
+static String pangrams(String s) {
+    s = s.toLowerCase();
+    HashSet<Integer> h = new HashSet<Integer>();
+    for (int i = 0; i < s.length(); i++) {
+        if(s.charAt(i)!=' '){
+            int put = (int)s.charAt(i);
+            h.add(put);
+        }
+    }
+    if(h.size()==26)
+        return "pangram";
+    else
+        return "not pangram";
+
+}
