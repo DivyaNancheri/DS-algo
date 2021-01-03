@@ -10,16 +10,16 @@ public class Solution {
         }
         return true;
     }
-    
+ 
     public static void main(String[] args)throws java.lang.Exception {
-        int MAX = 100; 
+        int MAX = 5000000; 
         boolean[] p= new boolean[MAX+1];
         ArrayList<Integer> primes = new ArrayList<Integer>();
-        
+ 
         for (int i = 0; i < MAX; i++) { 
             p[i]=true;
         }
-        
+ 
         p[0]=false;
         p[1]=false;
         for (int i = 2; i<=Math.sqrt(MAX); i++) { 
@@ -40,10 +40,10 @@ public class Solution {
         int q=sc.nextInt();
         while(q-- >0){
             int n=sc.nextInt();
-              
+ 
             System.out.println(primes.get(n-1));
         }
-
+ 
     }
     
 }

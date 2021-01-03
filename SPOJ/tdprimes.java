@@ -12,7 +12,7 @@ public class Solution {
     }
     
     public static void main(String[] args)throws java.lang.Exception {
-        int MAX = 100; 
+        int MAX = 100000000; 
         boolean[] p= new boolean[MAX+1];
         ArrayList<Integer> primes = new ArrayList<Integer>();
         
@@ -22,9 +22,11 @@ public class Solution {
         
         p[0]=false;
         p[1]=false;
+        int count=0;
         for (int i = 2; i<=Math.sqrt(MAX); i++) { 
             if(isPrime(i)==true){
                 primes.add(i);
+                
                 for (int j=i*i;j<=MAX;j=j+i){
                     p[j]=false;
                 }
@@ -33,20 +35,19 @@ public class Solution {
         // for (int i = 2; i < MAX; i++) { 
         //     System.out.println("i="+i+" p[i]="+p[i]);
         // }
-        // for (int i = 0; i < primes.size(); i++) { 
-        //     System.out.println("i="+i+" primes.get(i)="+primes.get(i));
-        // }
-        Scanner sc=new Scanner(System.in);
-        int q=sc.nextInt();
-        while(q-- >0){
-            int n=sc.nextInt();
-              
-            System.out.println(primes.get(n-1));
+        System.out.println("primes.size()="+primes.size());
+        for (int i = 0; i < primes.size(); i=i+100) { 
+            System.out.println("i="+i+" primes.get(i)="+primes.get(i));
         }
+        
+//         Scanner sc=new Scanner(System.in);
+//         int q=sc.nextInt();
+//         while(q-- >0){
+//             int n=sc.nextInt();
+              
+//             System.out.println(primes.get(n-1));
+//         }
 
     }
     
 }
-
-
-https://ideone.com/FAbwJv
