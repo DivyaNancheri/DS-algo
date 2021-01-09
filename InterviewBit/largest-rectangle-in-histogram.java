@@ -1,43 +1,33 @@
-public class Solution {
-    public int largestRectangleArea(ArrayList<Integer> ar) {
-        Stack<Integer> stack = new Stack<>();
-        int max = 0,x,area;  
-       
-        int i = 0; 
-        while (i < ar.size()) 
-        { 
-            if (stack.empty() || ar.get(stack.peek()) <= ar.get(i)){
-                stack.push(i++); 
-            } 
-            else
-            { 
-                x = stack.peek();
-                stack.pop();
-                if(stack.empty()){
-                    area=ar.get(x)*i;
-                }
-                else{
-                    area=ar.get(x)*(i-stack.peek()-1);
-                }
-                max=Math.max(max,area);
-            } 
-        } 
-       
-        
-        while (stack.empty() == false) 
-        { 
-            x = stack.peek();
-            stack.pop();
-            if(stack.empty()){
-                area=ar.get(x)*i;
-            }
-            else{
-                area=ar.get(x)*(i-stack.peek()-1);
-            }
-            max=Math.max(max,area);
-        } 
-        
-        return max;
-    }
+void display()
+{
+ int f=left, r=right;
+ if(f==-1)
+ {
+  printf("\nQueue is Empty\n");
+  return;
+ }
+ printf("\nThe elements in the queue are: ");
+ if(f<=r)
+ {
+  while(f<=r)
+  {
+   System.out.println("element="+dq[f]);
+   f++;
+  }
+ }
+ else
+ {
+  while(f<=MAX-1)
+  {
+   System.out.println("element="+dq[f]);
+   f++;
+  }
+  f=0;
+  while(f<=r)
+  {
+   System.out.println("element="+dq[f]);
+   f++;
+  }
+ }
+ printf("\n");
 }
-
