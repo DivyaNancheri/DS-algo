@@ -1,3 +1,15 @@
+public ListNode static rev(ListNode h){
+    ListNode p=null;
+    while(h!=null){
+        ListNode t=h.next;
+        h.next=p;
+        p=h;
+        h=t;
+    }
+    return p;
+}
+
+
 static void printLinkedList(SinglyLinkedListNode head) {
     SinglyLinkedListNode curr=head;
     while(curr!=null){
